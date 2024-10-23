@@ -1,6 +1,8 @@
 # catapult
 Building a toy text editor with the base following the kilo editor
 
+Following the amazing step by step instruction guide here : [Build your own text editor](https://viewsourcecode.org/snaptoken/kilo/)
+
 
 Development steps : 
 
