@@ -2,7 +2,9 @@
 include catapultt/config/*.yaml
 include catapultt/base_images/*.Dockerfile
 include catapultt/compose_files/*.yaml
-include catapultt/templates/*.*
+
+recursive-include catapultt/templates *
+graft catapultt/templates
 
 # Include documentation and license
 include README.md

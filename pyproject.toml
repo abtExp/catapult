@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "catapultt"
-version = "0.1.0"
+version = "0.1.1"
 description = "A tool for quickly setting up Docker development environments"
 readme = "README.md"
 authors = [
@@ -42,4 +42,4 @@ packages = ["catapultt"]
 "catapultt.config" = ["*.yaml"]
 "catapultt.base_images" = ["*.Dockerfile"]
 "catapultt.compose_files" = ["*.yaml"]
-"catapultt.templates" = ["*.*"]
+"catapultt.templates" = ["**/*"]
