@@ -28,9 +28,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/abtExp/catapultt"
-Issues = "https://github.com/abtExp/catapultt/issues"
-Documentation = "https://github.com/abtExp/catapultt#readme"
+Homepage = "https://github.com/abtExp/catapult"
+Issues = "https://github.com/abtExp/catapult/issues"
+Documentation = "https://github.com/abtExp/catapult#readme"
 
 [project.scripts]
 catapultt = "catapultt.launch:main"

@@ -2,7 +2,7 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/catapultt.svg)](https://pypi.org/project/catapultt/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/catapultt.svg)](https://pypi.org/project/catapultt/)
-[![License](https://img.shields.io/pypi/l/catapultt.svg)](https://github.com/abtExp/catapultt/blob/main/LICENSE)
+[![License](https://img.shields.io/pypi/l/catapultt.svg)](https://github.com/abtExp/catapult/blob/main/LICENSE)
 
 A streamlined tool for quickly setting up Docker development environments for various project types.
 
@@ -92,4 +92,4 @@ Configuration options are available in:
 
 ## License
 
-MIT License - see the [LICENSE](https://github.com/abtExp/catapultt/blob/main/LICENSE) file for details.
+MIT License - see the [LICENSE](https://github.com/abtExp/catapult/blob/main/LICENSE) file for details.
