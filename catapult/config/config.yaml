@@ -1,0 +1,17 @@
+dockerfiles:
+  cpp: 'cpp.Dockerfile'
+  node: 'node.Dockerfile'
+  python: 'python.Dockerfile'
+  deeplearning: 'deeplearning.Dockerfile'
+
+compose_files:
+  cpp: 'cpp.yaml'
+  node: 'node.yaml'
+  python: 'python.yaml'
+  deeplearning: 'deeplearning.yaml'
+
+template_files:
+  cpp: 'cpp/'
+  node: 'node/'
+  python: 'python/'
+  deeplearning: 'deeplearning/'

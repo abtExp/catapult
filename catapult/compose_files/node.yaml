@@ -1,0 +1,22 @@
+services:
+  {service_name}:
+    image: {image_name}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"  # Adjust port as needed for your app
+    volumes:
+      - ./:/app  # Mount current directory to /app
+      - /app/node_modules  # Use container node_modules (don't override with host)
+    environment:
+      - NODE_ENV=development
+    develop:
+      watch:
+        - action: sync
+          path: ./src
+          target: /app/src
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: package.json
