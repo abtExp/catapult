@@ -1,8 +1,8 @@
 # Include all template files
-include catapult/config/*.yaml
-include catapult/base_images/*.Dockerfile
-include catapult/compose_files/*.yaml
-include catapult/templates/*.*
+include catapultt/config/*.yaml
+include catapultt/base_images/*.Dockerfile
+include catapultt/compose_files/*.yaml
+include catapultt/templates/*.*
 
 # Include documentation and license
 include README.md

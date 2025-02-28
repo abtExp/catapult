@@ -1,8 +1,8 @@
-# Catapult Docker Development
+# Catapultt Docker Development
 
-[![PyPI version](https://img.shields.io/pypi/v/catapult.svg)](https://pypi.org/project/catapult/)
-[![Python Versions](https://img.shields.io/pypi/pyversions/catapult.svg)](https://pypi.org/project/catapult/)
-[![License](https://img.shields.io/pypi/l/catapult.svg)](https://github.com/abtExp/catapult/blob/main/LICENSE)
+[![PyPI version](https://img.shields.io/pypi/v/catapultt.svg)](https://pypi.org/project/catapultt/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/catapultt.svg)](https://pypi.org/project/catapultt/)
+[![License](https://img.shields.io/pypi/l/catapultt.svg)](https://github.com/abtExp/catapultt/blob/main/LICENSE)
 
 A streamlined tool for quickly setting up Docker development environments for various project types.
 
@@ -17,7 +17,7 @@ A streamlined tool for quickly setting up Docker development environments for va
 ## Installation
 
 ```bash
-pip install catapult
+pip install catapultt
 ```
 
 ### Requirements
@@ -30,7 +30,7 @@ pip install catapult
 
 ```bash
 # Launch the interactive tool
-catapult
+catapultt
 
 # Select environment type, project name, and location
 # Follow the prompts and you're ready to code!
@@ -63,7 +63,7 @@ catapult
 ### Creating a New Python Project
 
 ```bash
-$ catapult
+$ catapultt
 
 # Select "Python Development"
 # Name your project "my-python-app"
@@ -82,14 +82,14 @@ After setup, your project directory will contain:
 
 You can customize templates by editing files in:
 ```
-~/.catapult/templates/
+~/.catapultt/templates/
 ```
 
 Configuration options are available in:
 ```
-~/.catapult/templates.yaml
+~/.catapultt/templates.yaml
 ```
 
 ## License
 
-MIT License - see the [LICENSE](https://github.com/abtExp/catapult/blob/main/LICENSE) file for details.
+MIT License - see the [LICENSE](https://github.com/abtExp/catapultt/blob/main/LICENSE) file for details.

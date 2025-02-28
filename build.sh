@@ -9,7 +9,7 @@ YELLOW='\033[0;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-echo -e "${BLUE}=== Catapult - PyPI Packaging ===${NC}"
+echo -e "${BLUE}=== Catapultt - PyPI Packaging ===${NC}"
 
 # Check Python version
 python_version=$(python3 --version 2>&1 | grep -oP '(?<=Python )([0-9]+\.[0-9]+)')
@@ -39,7 +39,7 @@ if [[ $upload_test == "y" || $upload_test == "Y" ]]; then
     
     echo -e "${GREEN}Package uploaded to TestPyPI!${NC}"
     echo -e "You can test the installation with:"
-    echo -e "${YELLOW}pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple catapult${NC}"
+    echo -e "${YELLOW}pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple catapultt${NC}"
 fi
 
 # Ask if user wants to upload to PyPI
@@ -49,8 +49,8 @@ if [[ $upload_pypi == "y" || $upload_pypi == "Y" ]]; then
     twine upload dist/*
     
     echo -e "${GREEN}Package uploaded to PyPI!${NC}"
-    echo -e "Your package is now available at: https://pypi.org/project/catapult/"
-    echo -e "Users can install it with: ${YELLOW}pip install catapult${NC}"
+    echo -e "Your package is now available at: https://pypi.org/project/catapultt/"
+    echo -e "Users can install it with: ${YELLOW}pip install catapultt${NC}"
 else
     echo -e "${YELLOW}Not uploading to PyPI. You can do this later with:${NC}"
     echo -e "${YELLOW}twine upload dist/*${NC}"

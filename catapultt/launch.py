@@ -8,7 +8,7 @@ import subprocess
 import time
 from pathlib import Path
 
-from catapult.config import CONFIG
+from catapultt.config import CONFIG
 
 import questionary
 from questionary import Style
@@ -19,7 +19,7 @@ import pkg_resources
 
 class LAUNCHER:
     def __init__(self):
-        config_path = pkg_resources.resource_filename('catapult', 'config/config.yaml')
+        config_path = pkg_resources.resource_filename('catapultt', 'config/config.yaml')
         self.config = CONFIG(config_path)
         self.console = Console()
 
@@ -127,8 +127,8 @@ class LAUNCHER:
             shutil.move(f"{project_dir}/docker-compose.yml", f"{project_dir}/docker-compose.yml.backup.{current_time}")
             print("Backed up existing docker-compose.yml")
 
-        dockerfile_path = pkg_resources.resource_filename('catapult', f'base_images/{self.config.dockerfiles[self.env_type]}')
-        composefile_path = pkg_resources.resource_filename('catapult', f'compose_files/{self.config.compose_files[self.env_type]}')
+        dockerfile_path = pkg_resources.resource_filename('catapultt', f'base_images/{self.config.dockerfiles[self.env_type]}')
+        composefile_path = pkg_resources.resource_filename('catapultt', f'compose_files/{self.config.compose_files[self.env_type]}')
         # Create new files
         with open(f"{project_dir}/Dockerfile", "w") as f:
             with open(dockerfile_path, "r") as dockerfile:
@@ -150,16 +150,16 @@ class LAUNCHER:
     def create_template_files(self, project_dir, sanitized_name):
         """Create template files for the selected environment"""
         if self.env_type == "cpp":
-            temp_path = pkg_resources.resource_filename('catapult', f'templates/{self.config.template_files.cpp}')
+            temp_path = pkg_resources.resource_filename('catapultt', f'templates/{self.config.template_files.cpp}')
             shutil.copytree(temp_path, project_dir, dirs_exist_ok=True)
         elif self.env_type == "node":
-            temp_path = pkg_resources.resource_filename('catapult', f'templates/{self.config.template_files.node}')
+            temp_path = pkg_resources.resource_filename('catapultt', f'templates/{self.config.template_files.node}')
             shutil.copytree(temp_path, project_dir, dirs_exist_ok=True)
         elif self.env_type == "python":
-            temp_path = pkg_resources.resource_filename('catapult', f'templates/{self.config.template_files.python}')
+            temp_path = pkg_resources.resource_filename('catapultt', f'templates/{self.config.template_files.python}')
             shutil.copytree(temp_path, project_dir, dirs_exist_ok=True)
         elif self.env_type == "deeplearning":
-            temp_path = pkg_resources.resource_filename('catapult', f'templates/{self.config.template_files.deeplearning}')
+            temp_path = pkg_resources.resource_filename('catapultt', f'templates/{self.config.template_files.deeplearning}')
             shutil.copytree(temp_path, project_dir, dirs_exist_ok=True)
         else:
             self.console.print(f"[bold red]Unsupported environment: {self.env_type}[/]")

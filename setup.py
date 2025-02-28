@@ -4,14 +4,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="catapult",
+    name="catapultt",
     version="0.1.0",
     author="Anubhav Tiwari",
     author_email="abt.exp@gmail.com",
     description="A tool for quickly setting up Docker development environments",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/abtExp/catapult",
+    url="https://github.com/abtExp/catapultt",
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
@@ -20,14 +20,14 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "catapult=catapult.launch:main",
+            "catapultt=catapultt.launch:main",
         ],
     },
     package_data={
-        'catapult/config': ['*.yaml'],
-        'catapult/base_images': ['*.Dockerfile'],
-        'catapult/compose_files' : ['*.yaml'],
-        'catapult/templates' : ['*.*']
+        'catapultt/config': ['*.yaml'],
+        'catapultt/base_images': ['*.Dockerfile'],
+        'catapultt/compose_files' : ['*.yaml'],
+        'catapultt/templates' : ['*.*']
     },
     classifiers=[
         "Programming Language :: Python :: 3",

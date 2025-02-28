@@ -3,7 +3,7 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "catapult"
+name = "catapultt"
 version = "0.1.0"
 description = "A tool for quickly setting up Docker development environments"
 readme = "README.md"
@@ -28,18 +28,18 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/abtExp/catapult"
-Issues = "https://github.com/abtExp/catapult/issues"
-Documentation = "https://github.com/abtExp/catapult#readme"
+Homepage = "https://github.com/abtExp/catapultt"
+Issues = "https://github.com/abtExp/catapultt/issues"
+Documentation = "https://github.com/abtExp/catapultt#readme"
 
 [project.scripts]
-catapult = "catapult.launch:main"
+catapultt = "catapultt.launch:main"
 
 [tool.setuptools]
-packages = ["catapult"]
+packages = ["catapultt"]
 
 [tool.setuptools.package-data]
-"catapult.config" = ["*.yaml"]
-"catapult.base_images" = ["*.Dockerfile"]
-"catapult.compose_files" = ["*.yaml"]
-"catapult.templates" = ["*.*"]
+"catapultt.config" = ["*.yaml"]
+"catapultt.base_images" = ["*.Dockerfile"]
+"catapultt.compose_files" = ["*.yaml"]
+"catapultt.templates" = ["*.*"]
