@@ -1,0 +1,16 @@
+services:
+  {service_name}:
+    image: {image_name}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/code  # Mount current directory to /code
+    develop:
+      watch:
+        - action: rebuild
+          path: ./src
+        - action: rebuild
+          path: ./CMakeLists.txt

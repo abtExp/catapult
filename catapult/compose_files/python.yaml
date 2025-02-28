@@ -1,0 +1,20 @@
+services:
+  {service_name}:
+    image: {image_name}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"  # Adjust port as needed
+    volumes:
+      - ./:/app  # Mount current directory to /app
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /app
+          ignore:
+            - __pycache__/
+            - "*.pyc"
+        - action: rebuild
+          path: requirements.txt
