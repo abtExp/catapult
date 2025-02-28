@@ -1,4 +1,4 @@
-# Docker Development Launcher
+# Catapult
 
 A command-line tool to quickly set up and launch Docker-based development environments for various types of projects.
 
@@ -16,7 +16,7 @@ A command-line tool to quickly set up and launch Docker-based development enviro
 ### From PyPI (Recommended)
 
 ```bash
-pip install docker-dev-launcher
+pip install catapult
 ```
 
 ### From Source
@@ -34,7 +34,7 @@ pip install -e .
 After installation, you can run the tool with:
 
 ```bash
-docker-dev
+catapult
 ```
 
 Follow the interactive prompts to set up your development environment.
