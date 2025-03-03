@@ -62,11 +62,12 @@ class LAUNCHER:
         sanitized_name = self.sanitize_name(project_name)
         
         if sanitized_name != project_name:
-            console.print(f"[yellow]Project name sanitized to '[bold]{sanitized_name}[/]' for compatibility[/]")
+            self.console.print(f"[yellow]Project name sanitized to '[bold]{sanitized_name}[/]' for compatibility[/]")
         
         return project_name, sanitized_name
 
     def get_project_directory(self, project_name):
+
         """Get the target directory for the project"""
         # Ask if user wants to use current directory or specify another
         use_current = questionary.confirm(
@@ -200,18 +201,29 @@ class LAUNCHER:
         if not self.env_type:
             sys.exit(0)
 
-        # Get project name
-        project_name, sanitized_name = self.get_project_name()
-        
-        # Get project directory
-        project_dir = self.get_project_directory(sanitized_name)
+        use_existing = questionary.confirm(
+            "Do you want to use the current directory as your project?",
+            default=False,
+            style=self.custom_style
+        ).ask()
+
+        if use_existing:
+            project_dir = os.getcwd()
+            sanitized_name = self.sanitize_name(os.path.basename(project_dir))
+        else:
+            # Get project name
+            project_name, sanitized_name = self.get_project_name()
+            
+            # Get project directory
+            project_dir = self.get_project_directory(sanitized_name)
 
         self.console.print(f"\n[bold]Setting up [cyan]{self.env_type}[/] development environment for project : {sanitized_name}...[/]")
         # Get the docker files
         project_dir, image_name = self.setup_environment(sanitized_name, project_dir)
         
-        # Create template files if needed
-        self.create_template_files(project_dir, sanitized_name)
+        if not use_existing:
+            # Create template files if needed
+            self.create_template_files(project_dir, sanitized_name)
         
         # Launch confirmation
         launch = questionary.confirm(

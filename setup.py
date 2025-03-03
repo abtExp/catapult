@@ -1,6 +1,9 @@
 import os
 from setuptools import setup, find_packages
 
+
+__version__ = "0.1.2"
+
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
@@ -15,7 +18,7 @@ template_files = package_files('catapult/templates')
 
 setup(
     name="catapultt",
-    version="0.1.1",
+    version=f"{__version__}",
     author="Anubhav Tiwari",
     author_email="abt.exp@gmail.com",
     description="A tool for quickly setting up Docker development environments",
